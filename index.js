@@ -6,7 +6,7 @@ const CryptoJS = require('crypto-js');
 const request = require('request-promise-native');
 
 const TelegramBot = require('node-telegram-bot-api');
-const bot = new TelegramBot('436179913:AAFyV81vEstzvPqKAlovCHntf9NISMegw58', {polling: true});
+const bot = new TelegramBot('400387579:AAEHuf2ih2So6JfbL3QRoXg9wiWbmNChBAo', {polling: true});
 
 const CryptoJSAesJson = {
 	stringify: function (cipherParams) {
