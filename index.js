@@ -47,7 +47,7 @@ bot.on('text', function (msg) {
 		bot.sendMessage(msg.chat.id, 'Send desired score and link of @gamee game. For example:\n' +
 			'<pre>100 ' +
 			'https://www.gameeapp.com/game-bot/GAMECODE~telegram:inline~0000000000000000000~00000000~Name~Some_Hash</pre>' +
-			'\n\nBot by @kraso',
+			'\n\nBot by @kraso' +
 			'\n\nHost by @wankai',
 			{parse_mode: 'HTML'});
 	else {
