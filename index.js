@@ -34,7 +34,7 @@ function build(score, url) {
 	}).toString();
 	const sData = JSON.stringify({
 		score: score,
-		url: "/game/" + url,
+		url: "/game-bot/" + url,
 		play_time: 20,
 		hash: hash
 	});
@@ -46,7 +46,7 @@ bot.on('text', function (msg) {
 	if (/^\/start/.exec(msg.text))
 		bot.sendMessage(msg.chat.id, 'Send desired score and link of @gamee game. For example:\n' +
 			'<pre>100 ' +
-			'https://www.gameeapp.com/game/GAMECODE~telegram:inline~0000000000000000000~00000000~Name~Some_Hash</pre>' +
+			'https://www.gameeapp.com/game-bot/GAMECODE~telegram:inline~0000000000000000000~00000000~Name~Some_Hash</pre>' +
 			'\n\nBot by @kraso',
 			{parse_mode: 'HTML'});
 	else {
@@ -55,7 +55,7 @@ bot.on('text', function (msg) {
 		const score = info[0];
 		let url = '';
 		try {
-			url = /game\/(.+)#tg/.exec(info[1])[1];
+			url = /game-bot\/(.+)#tg/.exec(info[1])[1];
 		} catch (err) {
 			console.warn(err.message);
 		}
